@@ -19,6 +19,8 @@ public class model {
 
     @NotBlank
     private String message;
+    public model() {
+    }
 
     // Getters and setters
     public String getName() {

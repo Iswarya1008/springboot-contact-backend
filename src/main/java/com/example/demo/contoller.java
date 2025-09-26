@@ -18,7 +18,7 @@ public class contoller {
         return "✅ Backend is running fine on /api/contact";
     }
 
-    @PostMapping
+    @PostMapping(value ={"", "/"})
     public ResponseEntity<String> sendContact(@Valid @RequestBody model request) {
         emailService.sendContactMail(request);
         return ResponseEntity.ok("Enquiry sent successfully!");
